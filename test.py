@@ -87,7 +87,7 @@ class TestSum(unittest.TestCase):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate('minus four point two'), -4.2, "Something went wrong!")
 
-    #tests from email
+    #test from email
 
     def test_01(self):
         translator = NumberTranslator.Translator()
