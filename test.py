@@ -7,29 +7,33 @@ class TestSum(unittest.TestCase):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(0), 'zero', "Something went wrong!")
 
-    def test_smallNumberToText(self):
+    def test_unitNumberToText(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(1), 'one', "Something went wrong!")
 
-    def test_smallNumberToText2(self):
+    def test_teenNumberToText(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(10), 'ten', "Something went wrong!")
 
-    def test_smallNumberToText3(self):
+    def test_teenNumberToText2(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(15), 'fifteen', "Something went wrong!")
 
-    def test_smallNumberToText4(self):
+    def test_tensNumberToText(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(67), 'sixty seven', "Something went wrong!")
 
-    def test_mediumNumberToText(self):
+    def test_hundredsNumberToText(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(811), 'eight hundred eleven', "Something went wrong!")
 
     def test_containingzeroNumberToText(self):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate(10000), 'ten thousand', "Something went wrong!")
+
+    def test_containingzeroNumberToText(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate(10000101), 'ten million one hundred one', "Something went wrong!")
 
     def test_floatNumberToText(self):
         translator = NumberTranslator.Translator()
