@@ -87,5 +87,31 @@ class TestSum(unittest.TestCase):
         translator = NumberTranslator.Translator()
         self.assertEqual(translator.translate('minus four point two'), -4.2, "Something went wrong!")
 
+    #tests from email
+
+    def test_01(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate(111), 'one hundred eleven', "Something went wrong!")
+
+    def test_02(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate(4032), 'four thousand thirty two', "Something went wrong!")
+
+    def test_03(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate(87413), 'eighty seven thousand four hundred thirteen', "Something went wrong!")
+
+    def test_04(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate(45.2), 'forty five point two', "Something went wrong!")
+
+    def test_05(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate('Ten Thousand Four Hundred Eighty Two'), 10482, "Something went wrong!")
+
+    def test_06(self):
+        translator = NumberTranslator.Translator()
+        self.assertEqual(translator.translate('Zero point Nine'), 0.9, "Something went wrong!")
+
 if __name__ == '__main__':
     unittest.main()
