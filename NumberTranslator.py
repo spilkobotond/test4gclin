@@ -53,11 +53,8 @@ class Translator:
             for x in range(numberOfBigParts, 0, -1):
                 if i == 0:
                     subString = int(numberString[(0):(lastDecimal)])
-                    # print(str(subString) + texts.hundreds[x])
                 else:
                     subString = int(numberString[(lastDecimal + (i - 1) * 3):(lastDecimal + i * 3)])
-                    # print(str(subString) + texts.hundreds[x])
-
                 if subString != 0:
                     self.translate(subString)
                     self.text = self.text + ' ' + texts.hundreds[x]
